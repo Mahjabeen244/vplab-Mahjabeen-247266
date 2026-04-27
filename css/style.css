@@ -1,0 +1,96 @@
+/* DESIGN VARIABLES */
+:root {
+    --certo-blue: #4335DE;
+    --certo-dark-blue: #02033b;
+    --certo-yellow: #ffc107;
+    --certo-light-bg: #f3f7ff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--certo-dark-blue);
+    overflow-x: hidden;
+}
+
+/* BUTTONS */
+.btn-primary-certo {
+    background-color: var(--certo-blue);
+    color: white;
+    border-radius: 50px;
+    padding: 8px 25px;
+    border: none;
+}
+
+.btn-certo-yellow {
+    background-color: var(--certo-yellow);
+    color: var(--certo-dark-blue);
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* HERO SECTION LAYOUT */
+.hero-section {
+    background: linear-gradient(90deg, #ffffff 50%, var(--certo-light-bg) 50%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+/* IMAGE STACKING LOGIC */
+.hero-image-stack {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+}
+
+/* This creates the blue box behind the images */
+.hero-image-stack::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90%;
+    height: 90%;
+    background-color: var(--certo-blue);
+    z-index: -1;
+    border-radius: 30px;
+}
+
+.hero-bg {
+    border-radius: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-phone {
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 55%; /* Adjust size to match your Figma visually */
+    z-index: 3;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
+}
+
+/* REVIEWS */
+.reviews-section {
+    background-color: var(--certo-yellow);
+}
+
+.review-card {
+    border-radius: 25px;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 991px) {
+    .hero-section {
+        background: #ffffff;
+        text-align: center;
+    }
+    .hero-phone {
+        width: 45%;
+        right: 0;
+    }
+}
