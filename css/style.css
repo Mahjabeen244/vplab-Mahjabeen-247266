@@ -60,22 +60,25 @@ body {
 }
 
 .hero-bg {
-    width: 100%; /* Ensures div.png fills the 720px */
+    width: 100%;
+    height: auto;
     border-radius: 32px;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     display: block;
 }
 
+/* Foreground Image: Phone (figure.png) - Positioned on LEFT */
 .hero-phone {
     position: absolute;
-    /* Move to the LEFT side as per Figma layout */
-    left: -10%; 
+    /* Vertically center the phone */
     top: 50%;
     transform: translateY(-50%);
-    /* Width of 241px relative to 720px is ~33% */
+    /* Move to the left edge to match Figma overlap */
+    left: -10%; 
+    /* Size matches Figma's 241px width (~33% of 720px) */
     width: 33.5%; 
-    z-index: 3;
+    z-index: 2;
     filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
 }
 
