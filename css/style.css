@@ -40,10 +40,10 @@ body {
     align-items: center;
 }
 .hero-image-stack {
-    position: relative; 
+    position: relative;
     display: inline-block;
+    max-width: 720px; /* Matches Figma Width */
     width: 100%;
-    max-width: 720px; /* Exact Width from Figma 'div' */
 }
 
 /* The blue accent box seen in Figma */
