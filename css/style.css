@@ -1,9 +1,9 @@
 /* DESIGN VARIABLES */
 :root {
-    --certo-blue: #4335DE;
+    --certo-blue: #4335DE; /* Hex from your Figma Properties */
     --certo-dark-blue: #02033b;
     --certo-yellow: #ffc107;
-    --certo-light-bg: #f3f7ff;
+    --certo-light-bg: #F3F8FF; /* Corrected light blue from Figma */
 }
 
 body {
@@ -33,54 +33,50 @@ body {
 
 /* HERO SECTION LAYOUT */
 .hero-section {
+    /* Split background: White on left, Light Blue on right */
     background: linear-gradient(90deg, #ffffff 50%, var(--certo-light-bg) 50%);
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
 }
-
-/* IMAGE STACKING LOGIC */
 .hero-image-stack {
-    position: relative;
+    position: relative; 
     display: inline-block;
-    padding: 20px;
+    width: 100%;
+    max-width: 720px; /* Exact Width from Figma 'div' */
 }
 
-/* This creates the blue box behind the images */
+/* The blue accent box seen in Figma */
 .hero-image-stack::after {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 90%;
-    height: 90%;
+    top: -15px;
+    right: -15px;
+    width: 100%;
+    height: 100%;
     background-color: var(--certo-blue);
     z-index: -1;
-    border-radius: 30px;
+    border-radius: 32px;
 }
 
 .hero-bg {
-    border-radius: 30px;
+    width: 100%; /* Ensures div.png fills the 720px */
+    border-radius: 32px;
     position: relative;
     z-index: 2;
+    display: block;
 }
 
 .hero-phone {
     position: absolute;
-    bottom: -10%;
-    right: -5%;
-    width: 55%; /* Adjust size to match your Figma visually */
+    /* Move to the LEFT side as per Figma layout */
+    left: -10%; 
+    top: 50%;
+    transform: translateY(-50%);
+    /* Width of 241px relative to 720px is ~33% */
+    width: 33.5%; 
     z-index: 3;
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
-}
-
-/* REVIEWS */
-.reviews-section {
-    background-color: var(--certo-yellow);
-}
-
-.review-card {
-    border-radius: 25px;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
 }
 
 /* RESPONSIVENESS */
@@ -90,7 +86,7 @@ body {
         text-align: center;
     }
     .hero-phone {
-        width: 45%;
-        right: 0;
+        width: 35%;
+        left: 5%; /* Adjust for mobile view */
     }
 }
