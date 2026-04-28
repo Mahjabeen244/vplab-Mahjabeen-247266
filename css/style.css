@@ -1,91 +1,215 @@
-/* DESIGN VARIABLES */
-:root {
-    --certo-blue: #4335DE; /* Hex from your Figma Properties */
+/* ============================================
+   DESIGN VARIABLES
+   ============================================ */
+   :root {
+    --certo-blue: #4335DE;
     --certo-dark-blue: #02033b;
     --certo-yellow: #ffc107;
-    --certo-light-bg: #F3F8FF; /* Corrected light blue from Figma */
-}
-
-body {
+  }
+  
+  body {
     font-family: 'Inter', sans-serif;
     color: var(--certo-dark-blue);
     overflow-x: hidden;
-}
-
-/* BUTTONS */
-.btn-primary-certo {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ============================================
+     NAVBAR
+     ============================================ */
+  .navbar {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    color: var(--certo-dark-blue) !important;
+  }
+  
+  /* ============================================
+     BUTTONS
+     ============================================ */
+  .btn-primary-certo {
     background-color: var(--certo-blue);
     color: white;
     border-radius: 50px;
     padding: 8px 25px;
     border: none;
-}
-
-.btn-certo-yellow {
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .btn-primary-certo:hover {
+    background-color: #3528c5;
+    color: white;
+  }
+  
+  .btn-certo-yellow {
     background-color: var(--certo-yellow);
     color: var(--certo-dark-blue);
     border-radius: 50px;
-    padding: 12px 30px;
+    padding: 14px 32px;
     font-weight: 700;
     text-decoration: none;
     display: inline-block;
-}
-
-/* HERO SECTION LAYOUT */
-.hero-section {
-    /* Split background: White on left, Light Blue on right */
-    background: linear-gradient(90deg, #ffffff 50%, var(--certo-light-bg) 50%);
-    min-height: 85vh;
+    border: 2px solid var(--certo-dark-blue);
+    transition: transform 0.2s;
+  }
+  
+  .btn-certo-yellow:hover {
+    transform: scale(1.02);
+    color: var(--certo-dark-blue);
+  }
+  
+  .btn-outline-android {
+    border: 2px solid var(--certo-dark-blue);
+    background: transparent;
+    color: var(--certo-dark-blue);
+    border-radius: 50px;
+    padding: 14px 32px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s;
+  }
+  
+  .btn-outline-android:hover {
+    transform: scale(1.02);
+    color: var(--certo-dark-blue);
+  }
+  
+  /* ============================================
+     HERO SECTION
+     ============================================ */
+  .hero-section {
+    display: flex;
+    align-items: stretch;
+    min-height: 90vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero-left {
+    width: 50%;
     display: flex;
     align-items: center;
-    padding-top: 100px;
-}
-.hero-image-stack {
+    background: #ffffff;
+    padding: 60px 50px 60px 80px;
     position: relative;
-    display: inline-block;
-    max-width: 720px; /* Matches Figma Width */
-    width: 100%;
-}
-
-/* The blue accent box seen in Figma */
-.hero-image-stack::after {
-    content: "";
-    position: absolute;
-    top: -15px;
-    right: -15px;
+    z-index: 2;
+  }
+  .hero-left-inner {
+    max-width: 520px;
+  }
+  
+  .hero-left h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--certo-dark-blue);
+  }
+  
+  .hero-left p {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+  
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  /* RIGHT PANEL */
+  .hero-right {
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    background-color: var(--certo-blue);
+    padding: 24px 0 0 24px;
+  }
+  
+  .hero-image-wrapper {
     width: 100%;
     height: 100%;
-    background-color: var(--certo-blue);
-    z-index: -1;
-    border-radius: 32px;
-}
-
-.hero-bg {
+    border-radius: 24px 0 0 0;
+    overflow: hidden;
+  }
+  
+  .hero-bg-layer {
     width: 100%;
-    height: auto;
-    border-radius: 32px;
-    position: relative;
-    z-index: 1;
+    height: 100%;
+    object-fit: cover;
     display: block;
-}
-
-/* Foreground Image: Phone (figure.png) - Positioned on LEFT */
-.hero-phone {
+  }
+  
+  .hero-phone-layer {
     position: absolute;
-    /* Vertically center the phone */
     top: 50%;
     transform: translateY(-50%);
-    /* Move to the left edge to match Figma overlap */
-    left: -10%; 
-    /* Size matches Figma's 241px width (~33% of 720px) */
-    width: 33.5%; 
-    z-index: 2;
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
-}
-
-@media (max-width: 991px) {
-    .hero-phone {
-        left: 2%;
-        width: 35%;
+    left: -22%;
+    width: 55%;
+    max-width: 380px;
+    z-index: 10;
+    filter: drop-shadow(0 15px 40px rgba(0,0,0,0.35));
+  }
+  
+  /* ============================================
+     RESPONSIVE
+     ============================================ */
+  @media (max-width: 991px) {
+    .hero-section {
+      flex-direction: column;
+      min-height: auto;
     }
-}
+  
+    .hero-left,
+    .hero-right {
+      flex: none;
+      max-width: 100%;
+      width: 100%;
+    }
+  
+    .hero-left {
+      padding: 60px 24px 40px;
+      text-align: center;
+    }
+  
+    .hero-left-inner {
+      max-width: 100%;
+    }
+  
+    .hero-ctas {
+      justify-content: center;
+    }
+  
+    .hero-right {
+      height: 420px;
+      padding: 16px 0 0 16px;
+    }
+  
+    .hero-phone-layer {
+      left: 5%;
+      width: 38%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero-left h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-right {
+      height: 320px;
+    }
+  
+    .btn-certo-yellow,
+    .btn-outline-android {
+      padding: 12px 24px;
+      font-size: 0.9rem;
+    }
+  }
