@@ -189,3 +189,88 @@
       height: 300px;
     }
   }
+  
+  /* SECTION 2: TRUST & REVIEWS */
+.trust-section {
+  background-color: #FFC107; /* Figma Yellow */
+  color: #02033B;
+  overflow: hidden;
+}
+
+.trust-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+/* THE REVIEW CARDS */
+.review-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 40px; /* High rounding as seen in image_22e3f6.jpg */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+}
+
+.stars {
+  color: #FFC107;
+  font-size: 1.2rem;
+}
+
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.reviewer-name {
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+/* THE FEATURED LOGO BAR */
+.featured-bar {
+  border-top: 1px solid rgba(2, 3, 59, 0.1); /* Thin divider */
+  margin-top: 80px;
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  max-width: 1248px; /* Matching Figma image_22dc96.jpg */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featured-text {
+  font-weight: 800;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  margin-right: 40px;
+}
+
+.logo-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo-grid img {
+  max-height: 35px; /* Keeps logos uniform */
+  width: auto;
+  filter: brightness(0); /* Makes them dark like the Figma version */
+  opacity: 0.8;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+  .trust-title { font-size: 2rem; }
+  .featured-bar { flex-direction: column; gap: 20px; }
+  .logo-grid { flex-wrap: wrap; justify-content: center; gap: 30px; }
+}
