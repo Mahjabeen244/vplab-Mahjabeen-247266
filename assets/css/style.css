@@ -326,66 +326,50 @@
 }
 
 
-
-/* SECTION 3: FREEDOM OVERLAY STYLING */
-.freedom-container {
-  position: relative; /* Allows child elements to be placed anywhere */
-  width: 100%;
-  max-width: 1176px;
-  margin: 0 auto;
-  border-radius: 40px;
-  overflow: hidden;
+/* SECTION 4: COMPARISON STYLING */
+.comparison-section {
+  background-color: #ffffff;
+  padding: 100px 0;
 }
 
-.freedom-bg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.freedom-overlay {
-  position: absolute;
-  top: 50%;
-  left: 8%; /* Adjusts text to the left side of the man/graphic */
-  transform: translateY(-50%);
-  text-align: left;
-  z-index: 10;
-}
-
+/* Heading Styling */
 .freedom-title {
-  font-size: 4rem; /* Match the big Figma heading */
+  font-size: 3.5rem; /* Large and bold as per Figma */
   font-weight: 800;
   color: #02033B;
-  line-height: 1;
-  margin-bottom: 40px;
+  line-height: 1.2;
 }
 
-/* BUTTON BOX */
-.freedom-buttons {
-  display: flex;
-  gap: 20px;
+/* Table Image Styling */
+.comparison-img {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  /* Adding subtle rounding to match the cards */
+  border-radius: 20px; 
 }
 
-/* YELLOW BUTTON */
+/* BUTTONS */
 .btn-certo-yellow {
   background-color: #FFC107;
   color: #02033B;
-  padding: 18px 35px;
+  padding: 16px 35px;
   border-radius: 50px;
   font-weight: 800;
   text-decoration: none;
+  border: 2px solid #FFC107;
   transition: 0.3s;
 }
 
 .btn-certo-yellow:hover {
   background-color: #e6ae06;
+  color: #02033B;
 }
 
-/* OUTLINE BUTTON */
 .btn-outline-dark {
   background-color: transparent;
   color: #02033B;
-  padding: 18px 35px;
+  padding: 16px 35px;
   border-radius: 50px;
   font-weight: 800;
   text-decoration: none;
@@ -395,20 +379,15 @@
 
 .btn-outline-dark:hover {
   background-color: #02033B;
-  color: #fff;
+  color: #ffffff;
 }
 
-/* MOBILE FIX: On small screens, stack everything */
-@media (max-width: 991px) {
-  .freedom-overlay {
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: none;
-      padding: 40px 20px;
-      background-color: #f8f9fa; /* Light background so text is readable */
-      text-align: center;
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .freedom-title {
+      font-size: 2.2rem;
   }
-  .freedom-title { font-size: 2.5rem; }
-  .freedom-buttons { justify-content: center; flex-wrap: wrap; }
+  .comparison-section {
+      padding: 60px 20px;
+  }
 }
