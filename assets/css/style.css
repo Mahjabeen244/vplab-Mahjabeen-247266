@@ -264,13 +264,12 @@
 
 .logo-grid {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-grow: 1;
 }
 
 .logo-grid img {
-  max-height: 600px; /* Increased size to fix "too small" issue */
+  max-height: 800px; /* Increased size to fix "too small" issue */
   width: auto;
   filter: none; /* REMOVED brightness(0) to show original logo colors */
   opacity: 1; /* Full brightness */
@@ -294,13 +293,14 @@
   .logo-grid { 
       flex-wrap: wrap; 
       justify-content: center; 
-      gap: 40px; 
+      gap: 10px; 
   }
 }
 /* SECTION 3: FULL IMAGE SECTION */
 .security-image-section {
   background-color: #ffffff; /* White background around the image */
   padding: 80px 0;
+  top: 1%;
 }
 
 .security-full-img {
@@ -310,8 +310,8 @@
   height: auto;
   
   /* Optional: If your export doesn't have the shadow, add it here to match the cards */
-  border-radius: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  
+  
   
   /* Ensuring it stays crisp */
   display: block;
@@ -324,3 +324,6 @@
       max-width: 95%; /* Adds a small gap on tablet screens */
   }
 }
+
+
+
