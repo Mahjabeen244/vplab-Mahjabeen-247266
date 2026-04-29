@@ -191,36 +191,45 @@
   }
 
   /* SECTION 2: TRUST & REVIEWS */
-.trust-section {
-  background-color: #FFC107; /* Figma Yellow */
-  color: #02033B;
-  padding: 80px 0; /* Vertical breathing room */
-  overflow: hidden; /* CRITICAL: Clips the cards on the left/right edges */
+  .trust-section {
+    background-color: #FFC107;
+    padding: 70px 0;
+    overflow: hidden; /* This hides the parts of the side cards that go off-screen */
 }
-
 .trust-title {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.1;
-  text-align: left; /* Matches original design alignment */
-  margin-left: 5%; /* Aligns with the 'Your mobile' text above */
-  margin-bottom: 50px;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #02033B;
+    line-height: 1.2;
+  padding-right: 600px;
+}
+.featured-bar {
+  border-top: 1px solid rgba(223, 222, 215, 0.1);
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.trust-logo {
+  max-height: 35px;
+  margin: 0 25px;
+  filter: none; /* Keep original colors as seen in exports */
+}
 /* THE REVIEW CARDS ROW */
 .card-scroll-row {
-  padding: 0 20px;
-  /* Ensure the HTML row has: class="row flex-nowrap justify-content-center" */
+  display: flex;
+  gap: 30px; /* Space between cards */
 }
 
 .review-card {
   background: white;
-  border-radius: 40px; /* High rounding from Figma props */
+  border-radius: 40px; /* Match Figma props */
   padding: 40px;
-  min-width: 400px; /* Forces cards to be wide enough to overflow screen */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-  height: 100%;
+  width: 400px; /* Fixed width to force overflow */
+  min-height: 320px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  flex-shrink: 0; /* Prevents cards from squishing */
 }
 
 .review-card:hover {
@@ -244,16 +253,7 @@
 }
 
 /* THE FEATURED LOGO BAR (1248px x 95px Logic) */
-.featured-bar {
-  border-top: 1px solid rgba(2, 3, 59, 0.2); /* Slightly darker divider */
-  margin-top: 80px;
-  padding-top: 40px;
-  display: flex;
-  align-items: center;
-  max-width: 1248px; /* Precise Figma dimension */
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 .featured-text {
   font-weight: 800;
@@ -270,7 +270,7 @@
 }
 
 .logo-grid img {
-  max-height: 45px; /* Increased size to fix "too small" issue */
+  max-height: 600px; /* Increased size to fix "too small" issue */
   width: auto;
   filter: none; /* REMOVED brightness(0) to show original logo colors */
   opacity: 1; /* Full brightness */
