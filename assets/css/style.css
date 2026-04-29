@@ -297,3 +297,30 @@
       gap: 40px; 
   }
 }
+/* SECTION 3: FULL IMAGE SECTION */
+.security-image-section {
+  background-color: #ffffff; /* White background around the image */
+  padding: 80px 0;
+}
+
+.security-full-img {
+  /* Based on your Figma 'Hug' dimensions (1176px) */
+  max-width: 1176px; 
+  width: 100%;
+  height: auto;
+  
+  /* Optional: If your export doesn't have the shadow, add it here to match the cards */
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  
+  /* Ensuring it stays crisp */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .security-full-img {
+      max-width: 95%; /* Adds a small gap on tablet screens */
+  }
+}
