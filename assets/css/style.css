@@ -331,6 +331,7 @@
   background-color: #f3f4f6 !important; /* Forces the light grey background */
   width: 100%;
   display: block;
+  padding: 100px 0;
 }
 
 /* INNER BOX - THE WHITE CONTAINER */
