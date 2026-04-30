@@ -1,0 +1,393 @@
+:root {
+    --certo-blue: #4335DE;
+    --certo-dark-blue: #02033b;
+    --certo-yellow: #ffc107;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--certo-dark-blue);
+    overflow-x: hidden;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    color: var(--certo-dark-blue) !important;
+  }
+  
+  .btn-primary-certo {
+    background-color: var(--certo-blue);
+    color: white !important;
+    border-radius: 50px;
+    padding: 8px 25px;
+    border: none;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .btn-certo-yellow {
+    background-color: var(--certo-yellow);
+    color: var(--certo-dark-blue);
+    border-radius: 50px;
+    padding: 17px 30px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 3px solid var(--certo-dark-blue);
+    white-space: nowrap;
+    display: inline-block;
+  }
+  
+  .btn-outline-android {
+    border: 3px solid var(--certo-dark-blue);
+    background: transparent;
+    color: var(--certo-dark-blue);
+    border-radius: 50px;
+    padding: 17px 30px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  
+  /* ============================================
+     HERO
+     ============================================ */
+  .hero-section {
+    display: flex;
+    align-items: stretch;
+    min-height: 90vh;
+    overflow: hidden;
+  }
+  
+  /* LEFT: white text panel */
+  .hero-left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 60px 40px 60px 80px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-left-inner {
+    max-width: 700px;
+  }
+  
+  .hero-left h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    color: var(--certo-dark-blue);
+  }
+  
+  .hero-left p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+  
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+  }
+  
+  /* RIGHT: outer wrapper, bleeds to screen edge */
+  .hero-right {
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+  }
+  .hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 90%; /* Prevents text from stretching too far */
+}
+  /* Blue frame box — sits behind everything */
+  .hero-frame {
+    position: relative;
+    width: 100%;
+    background-color: var(--certo-blue);
+    padding: 20px 0 0 20px; /* blue peeks out top and left */
+    border-radius: 0;
+  }
+  
+  /* Orange background fills the frame */
+  .hero-bg-layer {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 20px 0 0 0;
+  }
+  
+  /* Phone — absolutely positioned, left side of frame, overlaps white panel */
+  .hero-phone-layer {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 54%;        /* overlap onto white text side */
+    width: 50%;
+    max-width: 250px;
+    z-index: 10;
+    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.3));
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 991px) {
+    .hero-section {
+      flex-direction: column;
+      min-height: auto;
+    }
+  
+    .hero-left,
+    .hero-right {
+      width: 100%;
+    }
+  
+    .hero-left {
+      padding: 50px 24px;
+      text-align: center;
+    }
+  
+    .hero-ctas {
+      justify-content: center;
+    }
+  
+    .hero-right {
+      height: 420px;
+    }
+  
+    .hero-phone-layer {
+      left: 5%;
+      width: 40%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero-left h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-right {
+      height: 300px;
+    }
+  }
+
+  /* SECTION 2: TRUST & REVIEWS */
+  .trust-section {
+    background-color: #FFC107;
+    padding: 70px 0;
+    overflow: hidden; /* This hides the parts of the side cards that go off-screen */
+}
+.trust-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #02033B;
+    line-height: 1.2;
+  padding-right: 600px;
+}
+.featured-bar {
+  border-top: 1px solid rgba(223, 222, 215, 0.1);
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trust-logo {
+  max-height: 35px;
+  margin: 0 25px;
+  filter: none; /* Keep original colors as seen in exports */
+}
+/* THE REVIEW CARDS ROW */
+.card-scroll-row {
+  display: flex;
+  gap: 30px; /* Space between cards */
+}
+
+.review-card {
+  background: white;
+  border-radius: 40px; /* Match Figma props */
+  padding: 40px;
+  width: 400px; /* Fixed width to force overflow */
+  min-height: 320px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  flex-shrink: 0; /* Prevents cards from squishing */
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+}
+
+.stars {
+  color: #FFC107;
+  font-size: 1.2rem;
+}
+
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.reviewer-name {
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+/* THE FEATURED LOGO BAR (1248px x 95px Logic) */
+
+
+.featured-text {
+  font-weight: 800;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  margin-right: 40px;
+}
+
+.logo-grid {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo-grid img {
+  max-height: 800px; /* Increased size to fix "too small" issue */
+  width: auto;
+  filter: none; /* REMOVED brightness(0) to show original logo colors */
+  opacity: 1; /* Full brightness */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+  .trust-title { 
+      font-size: 2.2rem; 
+      margin-left: 0; 
+      text-align: center;
+  }
+  .review-card {
+      min-width: 300px; /* Slightly smaller for mobile screens */
+  }
+  .featured-bar { 
+      flex-direction: column; 
+      gap: 30px; 
+      text-align: center;
+  }
+  .logo-grid { 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      gap: 10px; 
+  }
+}
+/* SECTION 3: FULL IMAGE SECTION */
+.security-image-section {
+  background-color: #ffffff; /* White background around the image */
+  padding: 80px 0;
+  top: 1%;
+}
+
+.security-full-img {
+  /* Based on your Figma 'Hug' dimensions (1176px) */
+  max-width: 1176px; 
+  width: 100%;
+  height: auto;
+  
+  /* Optional: If your export doesn't have the shadow, add it here to match the cards */
+  
+  
+  
+  /* Ensuring it stays crisp */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .security-full-img {
+      max-width: 95%; /* Adds a small gap on tablet screens */
+  }
+}
+
+
+/* SECTION 4: COMPARISON STYLING */
+.comparison-section {
+  background-color: #ffffff;
+  padding: 100px 0;
+}
+
+/* Heading Styling */
+.freedom-title {
+  font-size: 3.5rem; /* Large and bold as per Figma */
+  font-weight: 800;
+  color: #02033B;
+  line-height: 1.2;
+}
+
+/* Table Image Styling */
+.comparison-img {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  /* Adding subtle rounding to match the cards */
+  border-radius: 20px; 
+}
+
+/* BUTTONS */
+.btn-certo-yellow {
+  background-color: #FFC107;
+  color: #02033B;
+  padding: 16px 35px;
+  border-radius: 50px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 2px solid #FFC107;
+  transition: 0.3s;
+}
+
+.btn-certo-yellow:hover {
+  background-color: #e6ae06;
+  color: #02033B;
+}
+
+.btn-outline-dark {
+  background-color: transparent;
+  color: #02033B;
+  padding: 16px 35px;
+  border-radius: 50px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 2px solid #02033B;
+  transition: 0.3s;
+}
+
+.btn-outline-dark:hover {
+  background-color: #02033B;
+  color: #ffffff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .freedom-title {
+      font-size: 2.2rem;
+  }
+  .comparison-section {
+      padding: 60px 20px;
+  }
+}
