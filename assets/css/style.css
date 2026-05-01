@@ -202,7 +202,9 @@
   width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto; /* Keeps the image centered on the yellow background */
+  margin: 0 auto;
+  margin-left: 96px;
+   /* Keeps the image centered on the yellow background */
 }
 
 .featured-bar {
