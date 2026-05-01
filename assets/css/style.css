@@ -587,9 +587,9 @@
 
 
 
-
+/* LATEST INSIGHTS SECTION */
 .insights-section {
-  background-color: #F3F8FF;
+  background-color: #F3F8FF; /* Light background from Figma */
   padding: 90px 0;
 }
 
@@ -601,16 +601,15 @@
   margin-bottom: 50px;
 }
 
-/* CARD STYLING - UPDATED FOR VERTICAL "LONG" LOOK */
+/* CARD STYLING */
 .insight-card {
   background: #ffffff;
-  border-radius: 40px; /* Matching the deep round corners in Figma */
+  border-radius: 40px; /* Deep rounded corners per Figma */
   overflow: hidden;
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* CHANGE: Limiting width prevents the 'short and wide' look */
-  max-width: 380px; 
+  max-width: 380px; /* Prevents the 'short/fat' look */
   margin: 0 auto; 
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -620,41 +619,48 @@
   transform: translateY(-5px);
 }
 
+/* IMAGE WRAPPER - LOCKED TO 70PX */
 .card-image-wrap {
   position: relative;
-  /* CHANGE: Increased height makes the top half of the card look longer */
-  height: 280px; 
+  height: 70px; /* Exact height requested */
+  width: 100%;
 }
 
 .card-image-wrap img {
   width: 100%;
-  height: 70%;
-  object-fit: cover;
+  height: 100%; /* Fills the 70px height */
+  object-fit: cover; /* Prevents squashing */
 }
 
+/* BADGE ADJUSTMENT */
 .badge {
   position: absolute;
-  top: 20px;
+  top: 15px;
   left: 20px;
   background: #ffffff;
   color: #02033B;
-  padding: 6px 16px;
+  padding: 4px 12px;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
+/* CARD BODY - TEXT ALIGNMENT */
 .card-body {
-  /* CHANGE: Increased top/bottom padding stretches the card vertically */
-  padding: 45px 35px; 
+  /* Reduced top padding (15px) to move text directly under image */
+  padding: 15px 35px 45px 35px; 
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .card-body h3 {
-  font-size: 1.6rem; /* Slightly larger to match Figma scale */
+  font-size: 1.5rem;
   font-weight: 800;
   color: #02033B;
-  margin-bottom: 20px;
+  margin-top: 0; /* Pulls title to the very top of the white area */
+  margin-bottom: 15px;
   line-height: 1.2;
 }
 
@@ -663,9 +669,10 @@
   color: #02033B;
   opacity: 0.9;
   line-height: 1.6;
+  white-space: normal; /* Ensures text wraps correctly */
 }
 
-/* CENTERED BUTTON */
+/* VIEW ALL BUTTON */
 .btn-view-all {
   display: inline-block;
   background-color: #FFC22B;
@@ -679,5 +686,4 @@
 
 .btn-view-all:hover {
   background-color: #e5ae26;
-  color: #02033B;
 }
