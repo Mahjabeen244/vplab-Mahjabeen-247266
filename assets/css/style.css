@@ -189,7 +189,112 @@
       height: 300px;
     }
   }
+/* SECTION 2: TRUST & REVIEWS */
+.trust-section {
+  background-color: #FFC107;
+  padding: 70px 0;
+  overflow: hidden; /* This hides the parts of the side cards that go off-screen */
+}
 
+/* NEW: Style for the exported Figma heading image */
+.review-header-img {
+  max-width: 609px; /* Matches the '609 Hug' width from Figma */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Keeps the image centered on the yellow background */
+}
+
+.featured-bar {
+  border-top: 1px solid rgba(223, 222, 215, 0.1);
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trust-logo {
+  max-height: 35px;
+  margin: 0 25px;
+  filter: none; /* Keep original colors as seen in exports */
+}
+
+/* THE REVIEW CARDS ROW */
+.card-scroll-row {
+  display: flex;
+  gap: 30px; /* Space between cards */
+}
+
+.review-card {
+  background: white;
+  border-radius: 40px; /* Match Figma props */
+  padding: 40px;
+  width: 400px; /* Fixed width to force overflow */
+  min-height: 320px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  flex-shrink: 0; /* Prevents cards from squishing */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+}
+
+.stars {
+  color: #FFC107;
+  font-size: 1.2rem;
+}
+
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.reviewer-name {
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.featured-text {
+  font-weight: 800;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  margin-right: 40px;
+}
+
+.logo-grid {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo-grid img {
+  max-height: 800px; /* Increased size per your current code */
+  width: auto;
+  filter: none; 
+  opacity: 1; 
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+  .review-header-img {
+      max-width: 90%; /* Scales down the image for mobile screens */
+  }
+  .review-card {
+      min-width: 300px; 
+  }
+  .featured-bar { 
+      flex-direction: column; 
+      gap: 30px; 
+      text-align: center;
+  }
+  .logo-grid { 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      gap: 10px; 
+  }
+}
 
 /* SECTION 3: FULL IMAGE SECTION */
 .security-image-section {
