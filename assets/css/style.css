@@ -596,7 +596,7 @@
 .section-title {
   text-align: center;
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 900;
   color: #02033B;
   margin-bottom: 50px;
 }
@@ -604,7 +604,7 @@
 /* CARD STYLING */
 .insight-card {
   background: #ffffff;
-  border-radius: 24px;
+  border-radius: 85px;
   overflow: hidden;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
   height: 100%;
