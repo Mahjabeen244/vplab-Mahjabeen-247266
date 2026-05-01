@@ -401,7 +401,7 @@
 /* SECTION 5 BACKGROUND (BRIGHT WHITE) */
 .section-white-bg {
   background-color: #ffffff !important; 
-  padding: 120px 0; 
+  padding: 60px 0; 
   width: 100%;
   display: block;
 }
