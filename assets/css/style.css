@@ -424,16 +424,17 @@
 .yellow-card-wrapper {
   display: flex;
   justify-content: flex-end;
-  padding-right: 30px; /* Keeps the card to the left of its column */
+  padding-right: 10px; /* Keeps the card to the left of its column */
 }
 
 .help-card-img {
   width: 100%;
-  max-width: 540px; 
+  max-width: 600px; 
   /* Fixed width from Figma */
   height: auto;
   display: block;
   border-radius: 40px;
+  padding-left: -26px;
 }
 
 
@@ -443,6 +444,7 @@
   color: #02033B;
   margin-bottom: 20px;
   line-height: 1.2;
+  padding-left: -26px;
 }
 
 .help-center-p {
@@ -450,6 +452,7 @@
   color: #02033B;
   line-height: 1.6;
   margin-bottom: 30px;
+  padding-left: -20px;
 }
 
 .help-center-content {
