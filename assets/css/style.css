@@ -697,95 +697,78 @@
 }
 
 
+
+
+
+
 .main-footer {
-    background-color: #02033B; /* Exact dark blue */
-    padding: 96px 0; /* Exact top/bottom padding */
-    color: #ffffff;
+  background-color: #02033B; /* Deep Blue from Figma */
+  padding: 96px 0; /* Matching Figma padding */
+  color: #ffffff;
 }
 
 .footer-brand {
-    font-weight: 800;
-    font-size: 1.4rem;
-    margin-bottom: 20px;
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
 }
 
-/* SOCIALS */
+/* SOCIALS IMAGE */
 .social-wrapper {
-    margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 .social-img {
-    height: 30px; /* Adjust based on your export size */
-    width: auto;
+  height: 30px; /* Adjust this height to match your export scale */
+  width: auto;
 }
 
-/* NAV LINKS */
+/* NAVIGATION */
 .footer-heading {
-    font-weight: 800;
-    font-size: 1.6rem;
-    margin-bottom: 20px;
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
 }
 
 .footer-nav {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-nav li {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .footer-nav li a {
-    color: #FFC22B; /* Yellow text for links */
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
+  color: #FFC22B; /* Yellow links from design */
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.footer-nav li a:hover {
-    color: #ffffff;
+/* NEWSLETTER IMAGE BOX */
+.newsletter-static-wrap {
+  text-align: right; /* Aligns the image to the right of the container */
 }
 
-/* NEWSLETTER WRAPPER */
-.newsletter-image-wrap {
-    position: relative;
-    border-radius: 40px;
-    overflow: hidden;
+.footer-main-img {
+  border-radius: 40px; /* Maintains the rounded look of your export */
+  max-width: 100%;
+  height: auto;
 }
 
-/* This places a real form over your image so people can still type */
-.newsletter-overlay {
-    position: absolute;
-    bottom: 40px; /* Adjust based on where your image's input looks */
-    left: 40px;
-    right: 40px;
-    display: flex;
-    background: #fff;
-    border-radius: 50px;
-    padding: 5px;
-}
-
-.newsletter-overlay button {
-    background: #02033B;
-    color: #fff;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 50px;
-    font-weight: 700;
-}
-
-/* LEGAL */
+/* LEGAL TEXT */
 .footer-legal a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  opacity: 0.9;
 }
 
 .copyright {
-    font-size: 0.8rem;
-    opacity: 0.6;
-    margin-top: 20px;
-    line-height: 1.5;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 25px;
+  line-height: 1.6;
 }
