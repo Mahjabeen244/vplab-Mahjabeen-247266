@@ -714,11 +714,13 @@
   font-weight: 800;
   font-size: 1.2rem; /* Slightly larger to match scale */
   margin-bottom: 30px;
+  margin-top: 20px;
   margin-left: 80px;
 }
 
 .social-wrapper {
   margin-bottom: 50px;
+  margin-left: 80px;
 }
 
 .social-img {
