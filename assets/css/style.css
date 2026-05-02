@@ -712,8 +712,9 @@
 /* LEFT SIDE: Brand & Socials */
 .footer-brand {
   font-weight: 800;
-  font-size: 1.4rem; /* Slightly larger to match scale */
+  font-size: 1.2rem; /* Slightly larger to match scale */
   margin-bottom: 30px;
+  margin-left: 80px;
 }
 
 .social-wrapper {
