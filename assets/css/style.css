@@ -700,75 +700,123 @@
 
 
 
-
+/* MAIN FOOTER SECTION */
 .main-footer {
   background-color: #02033B; /* Deep Blue from Figma */
-  padding: 96px 0; /* Matching Figma padding */
+  /* Increased padding to 140px to give that large, spacious feel */
+  padding: 140px 0 80px 0; 
   color: #ffffff;
+  position: relative;
 }
 
+/* LEFT SIDE: Brand & Socials */
 .footer-brand {
   font-weight: 800;
-  font-size: 1.4rem;
-  margin-bottom: 25px;
+  font-size: 1.6rem; /* Slightly larger to match scale */
+  margin-bottom: 30px;
 }
 
-/* SOCIALS IMAGE */
 .social-wrapper {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .social-img {
-  height: 30px; /* Adjust this height to match your export scale */
+  /* Increased from 30px to 48px to make them "Big" like the first picture */
+  height: 48px; 
   width: auto;
+  filter: brightness(0) invert(1); /* Ensures icons are pure white if they weren't already */
 }
 
-/* NAVIGATION */
+/* MIDDLE: Navigation */
 .footer-heading {
   font-weight: 800;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 25px;
+  /* Thin underline under 'Certo' title */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 .footer-nav {
   list-style: none;
   padding: 0;
+  margin-top: 15px;
 }
 
 .footer-nav li {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .footer-nav li a {
-  color: #FFC22B; /* Yellow links from design */
+  color: #FFC22B; /* Signature Yellow */
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: opacity 0.3s;
 }
 
-/* NEWSLETTER IMAGE BOX */
+.footer-nav li a:hover {
+  opacity: 0.8;
+}
+
+/* RIGHT SIDE: Newsletter & White Box */
 .newsletter-static-wrap {
-  text-align: right; /* Aligns the image to the right of the container */
+  text-align: right;
+  margin-bottom: 30px;
 }
 
 .footer-main-img {
-  border-radius: 40px; /* Maintains the rounded look of your export */
+  border-radius: 40px;
   max-width: 100%;
   height: auto;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
 }
 
-/* LEGAL TEXT */
-.footer-legal a {
+/* THE WHITE SQUARE (Certification Badge) */
+.white-badge-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.white-square-badge {
+  width: 160px; /* Adjust based on your image size */
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BOTTOM AREA: Legal & Copyright */
+.footer-legal-container {
+  margin-top: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 40px;
+}
+
+.footer-legal-links a {
   color: #fff;
-  text-decoration: none;
-  display: block;
-  font-size: 0.9rem;
-  margin-bottom: 5px;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  margin-right: 25px;
   opacity: 0.9;
 }
 
 .copyright {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   opacity: 0.6;
-  margin-top: 25px;
-  line-height: 1.6;
+  margin-top: 20px;
+  line-height: 1.8;
+}
+
+/* The small legal disclaimer text at the very bottom left */
+.legal-disclaimer {
+  font-size: 0.75rem;
+  opacity: 0.4;
+  margin-top: 40px;
+  max-width: 900px;
+  line-height: 1.5;
 }
