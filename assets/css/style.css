@@ -737,9 +737,9 @@
   font-weight: 800;
   font-size: 1.8rem;
   margin-bottom: 25px;
-  margin-left: 70px;
+  margin-left: 60px;
   /* Thin underline under 'Certo' title */
-  border-bottom: 3px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
   display: inline-block;
   padding-bottom: 5px;
 }
