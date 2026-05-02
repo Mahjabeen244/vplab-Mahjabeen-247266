@@ -698,102 +698,94 @@
 
 
 .main-footer {
-  background-color: #02033B; /* Exact dark blue */
-  padding: 96px 0; /* Exact top/bottom padding */
-  color: #ffffff;
+    background-color: #02033B; /* Exact dark blue */
+    padding: 96px 0; /* Exact top/bottom padding */
+    color: #ffffff;
 }
 
 .footer-brand {
-  font-weight: 800;
-  font-size: 1.4rem;
-  margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
 }
 
 /* SOCIALS */
 .social-wrapper {
-  margin-bottom: 35px;
+    margin-bottom: 35px;
 }
 
 .social-img {
-  height: 30px; /* Adjust based on your export size */
-  width: auto;
+    height: 30px; /* Adjust based on your export size */
+    width: auto;
 }
 
 /* NAV LINKS */
 .footer-heading {
-  font-weight: 800;
-  font-size: 1.6rem;
-  margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
 }
 
 .footer-nav {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-nav li {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 .footer-nav li a {
-  color: #FFC22B; /* Yellow text for links */
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+    color: #FFC22B; /* Yellow text for links */
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 .footer-nav li a:hover {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 /* NEWSLETTER WRAPPER */
 .newsletter-image-wrap {
-  position: relative;
-  border-radius: 40px;
-  overflow: hidden;
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
 }
 
 /* This places a real form over your image so people can still type */
 .newsletter-overlay {
-  position: absolute;
-  bottom: 40px; /* Adjust based on where your image's input looks */
-  left: 40px;
-  right: 40px;
-  display: flex;
-  background: #fff;
-  border-radius: 50px;
-  padding: 5px;
-}
-
-.newsletter-overlay input {
-  border: none;
-  padding: 10px 15px;
-  flex-grow: 1;
-  border-radius: 50px;
-  outline: none;
+    position: absolute;
+    bottom: 40px; /* Adjust based on where your image's input looks */
+    left: 40px;
+    right: 40px;
+    display: flex;
+    background: #fff;
+    border-radius: 50px;
+    padding: 5px;
 }
 
 .newsletter-overlay button {
-  background: #02033B;
-  color: #fff;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 50px;
-  font-weight: 700;
+    background: #02033B;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 700;
 }
 
 /* LEGAL */
 .footer-legal a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  font-size: 0.9rem;
-  margin-bottom: 5px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
 }
 
 .copyright {
-  font-size: 0.8rem;
-  opacity: 0.6;
-  margin-top: 20px;
-  line-height: 1.5;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-top: 20px;
+    line-height: 1.5;
 }
