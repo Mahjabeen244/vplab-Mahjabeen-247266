@@ -1,9 +1,15 @@
-:root {
+/* ============================================================
+   CSS CUSTOM PROPERTIES (DESIGN VARIABLES)
+   ============================================================ */
+   :root {
     --certo-blue: #4335DE;
     --certo-dark-blue: #02033b;
     --certo-yellow: #ffc107;
   }
   
+  /* ============================================================
+     GLOBAL RESET AND BASE STYLES
+     ============================================================ */
   * {
     margin: 0;
     padding: 0;
@@ -16,7 +22,9 @@
     overflow-x: hidden;
   }
   
-  /* NAVBAR */
+  /* ============================================================
+     NAVBAR STYLES
+     ============================================================ */
   .navbar {
     box-shadow: 0 1px 0 rgba(0,0,0,0.06);
   }
@@ -31,11 +39,13 @@
     color: white !important;
     border-radius: 50px;
     padding: 8px 25px;
-    border: none;
     font-weight: 600;
     text-decoration: none;
   }
   
+  /* ============================================================
+     SHARED BUTTON STYLES
+     ============================================================ */
   .btn-certo-yellow {
     background-color: var(--certo-yellow);
     color: var(--certo-dark-blue);
@@ -60,9 +70,9 @@
     display: inline-block;
   }
   
-  /* ============================================
-     HERO
-     ============================================ */
+  /* ============================================================
+     HERO SECTION
+     ============================================================ */
   .hero-section {
     display: flex;
     align-items: stretch;
@@ -70,7 +80,7 @@
     overflow: hidden;
   }
   
-  /* LEFT: white text panel */
+  /* Left panel: white background with text content */
   .hero-left {
     width: 50%;
     display: flex;
@@ -107,27 +117,29 @@
     align-items: center;
   }
   
-  /* RIGHT: outer wrapper, bleeds to screen edge */
+  /* Right panel: blue frame containing background and phone images */
   .hero-right {
     width: 50%;
     position: relative;
     display: flex;
     align-items: stretch;
   }
+
   .hero-subtitle {
     font-size: 1.25rem;
-    max-width: 90%; /* Prevents text from stretching too far */
+    max-width: 90%;
 }
-  /* Blue frame box — sits behind everything */
+
+  /* Blue frame box sits behind the background image */
   .hero-frame {
     position: relative;
     width: 100%;
     background-color: var(--certo-blue);
-    padding: 20px 0 0 20px; /* blue peeks out top and left */
+    padding: 20px 0 0 20px;
     border-radius: 0;
   }
   
-  /* Orange background fills the frame */
+  /* Orange/coloured background fills the frame */
   .hero-bg-layer {
     width: 100%;
     height: 100%;
@@ -137,19 +149,19 @@
     border-radius: 20px 0 0 0;
   }
   
-  /* Phone — absolutely positioned, left side of frame, overlaps white panel */
+  /* Phone image overlaps onto the white text panel */
   .hero-phone-layer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 54%;        /* overlap onto white text side */
+    right: 54%;
     width: 50%;
     max-width: 250px;
     z-index: 10;
     filter: drop-shadow(0 20px 50px rgba(0,0,0,0.3));
   }
   
-  /* RESPONSIVE */
+  /* Hero responsive - tablet and below */
   @media (max-width: 991px) {
     .hero-section {
       flex-direction: column;
@@ -180,6 +192,7 @@
     }
   }
   
+  /* Hero responsive - mobile */
   @media (max-width: 576px) {
     .hero-left h1 {
       font-size: 2rem;
@@ -189,24 +202,27 @@
       height: 300px;
     }
   }
-/* SECTION 2: TRUST & REVIEWS */
+
+/* ============================================================
+   TRUST AND REVIEWS SECTION
+   ============================================================ */
 .trust-section {
   background-color: #FFC107;
   padding: 70px 0;
-  overflow: hidden; /* This hides the parts of the side cards that go off-screen */
+  overflow: hidden;
 }
 
-/* NEW: Style for the exported Figma heading image */
+/* Figma exported heading image - centered with left offset to match design */
 .review-header-img {
-  max-width: 609px; /* Matches the '609 Hug' width from Figma */
+  max-width: 609px;
   width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
   margin-left: 96px;
-   /* Keeps the image centered on the yellow background */
 }
 
+/* Featured in logos bar with top border separator */
 .featured-bar {
   border-top: 1px solid rgba(223, 222, 215, 0.1);
   padding-top: 40px;
@@ -218,26 +234,27 @@
 .trust-logo {
   max-height: 35px;
   margin: 0 25px;
-  filter: none; /* Keep original colors as seen in exports */
+  filter: none;
 }
 
-/* THE REVIEW CARDS ROW */
+/* Review cards row - horizontal layout with fixed widths to create overflow effect */
 .card-scroll-row {
   display: flex;
-  gap: 30px; /* Space between cards */
+  gap: 30px;
 }
 
 .review-card {
   background: white;
-  border-radius: 40px; /* Match Figma props */
+  border-radius: 40px;
   padding: 40px;
-  width: 400px; /* Fixed width to force overflow */
+  width: 400px;
   min-height: 320px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-  flex-shrink: 0; /* Prevents cards from squishing */
-  transition: transform 0.3s ease; /* Smooth hover effect */
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
+/* Hover effect lifts card upward */
 .review-card:hover {
   transform: translateY(-10px);
 }
@@ -272,80 +289,78 @@
 }
 
 .logo-grid img {
-  max-height: 800px; /* Increased size per your current code */
+  max-height: 800px;
   width: auto;
-  filter: none; 
-  opacity: 1; 
+  filter: none;
+  opacity: 1;
 }
 
-/* Mobile Adjustments */
+/* Trust section responsive */
 @media (max-width: 991px) {
   .review-header-img {
-      max-width: 90%; /* Scales down the image for mobile screens */
+      max-width: 90%;
   }
   .review-card {
-      min-width: 300px; 
+      min-width: 300px;
   }
-  .featured-bar { 
-      flex-direction: column; 
-      gap: 30px; 
+  .featured-bar {
+      flex-direction: column;
+      gap: 30px;
       text-align: center;
   }
-  .logo-grid { 
-      flex-wrap: wrap; 
-      justify-content: center; 
-      gap: 10px; 
+  .logo-grid {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
   }
 }
 
-/* SECTION 3: FULL IMAGE SECTION */
+/* ============================================================
+   SECURITY IMAGE SECTION
+   ============================================================ */
 .security-image-section {
-  background-color: #ffffff; /* White background around the image */
+  background-color: #ffffff;
   padding: 80px 0;
   top: 1%;
 }
 
+/* Full-width Figma exported image centered on white background */
 .security-full-img {
-  /* Based on your Figma 'Hug' dimensions (1176px) */
-  max-width: 1176px; 
+  max-width: 1176px;
   width: 100%;
   height: auto;
-  
-  /* Optional: If your export doesn't have the shadow, add it here to match the cards */
-  
-  
-  
-  /* Ensuring it stays crisp */
   display: block;
   margin: 0 auto;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1200px) {
   .security-full-img {
-      max-width: 95%; /* Adds a small gap on tablet screens */
+      max-width: 95%;
   }
 }
 
+/* ============================================================
+   SPYWARE PROTECTION / FREEDOM SECTION
+   ============================================================ */
 
-/* OUTER SECTION - FORCING THE GREY */
+/* Outer section uses light blue/grey background */
 #spyware-protection {
-  background-color:#f3f8ff !important; /* Forces the light grey background */
+  background-color:#f3f8ff !important;
   width: 100%;
   display: block;
   padding: 100px 0;
 }
 
-/* INNER BOX - THE WHITE CONTAINER */
+/* Inner white rounded box contains the feature image and buttons */
 .inner-white-box {
-  background-color: #ffffff !important; /* Forces bright white */
+  background-color: #ffffff !important;
   border-radius: 40px;
   padding: 100px 20px;
   max-width: 840px;
   margin: 0 auto;
 }
 
-/* TEXT & IMAGE STYLING */
+/* Section heading with precise Figma dimensions */
 .freedom-title {
   font-size: 2.3rem;
   font-weight: 600;
@@ -361,9 +376,6 @@
   line-height: 1.1;
 }
 
-
-
-
 .freedom-img {
   border-radius: 20px;
   box-shadow: none !important;
@@ -373,7 +385,9 @@
   height: auto;
 }
 
-/* BUTTONS */
+/* ============================================================
+   SHARED BUTTON STYLES (FREEDOM SECTION)
+   ============================================================ */
 .btn-certo-yellow {
   background-color: #FFC107;
   color: #02033B;
@@ -395,13 +409,14 @@
   display: inline-block;
 }
 
+/* ============================================================
+   HELP CENTER SECTION
+   ============================================================ */
 
-
-
-/* SECTION 5 BACKGROUND (BRIGHT WHITE) */
+/* White background section */
 .section-white-bg {
-  background-color: #ffffff !important; 
-  padding: 60px 0; 
+  background-color: #ffffff !important;
+  padding: 60px 0;
   width: 100%;
   display: block;
 }
@@ -411,44 +426,34 @@
   margin: 0 auto;
 }
 
-/* THE ROW: Center the columns so they naturally sit closer */
 .section-white-bg .row {
-  justify-content: center !important; 
+  justify-content: center !important;
   display: flex;
 }
 
-/* LEFT SIDE: IMAGE WRAPPER */
+/* Image wrapper pushes card toward the text on the right */
 .yellow-card-wrapper {
   display: flex;
-  /* Pushes the card to the RIGHT side of its column (towards the text) */
-  justify-content: flex-end; 
+  justify-content: flex-end;
   width: 100%;
-  padding-right: 40px; /* Controls the exact gap between card and text */
+  padding-right: 40px;
 }
 
 .help-card-img {
   width: 100%;
-  max-width: 700px; 
+  max-width: 700px;
   height: auto;
   display: block;
   border-radius: 40px;
-  /* Negative padding removed - it does not function in CSS */
 }
 
-/* RIGHT SIDE: TEXT CONTENT */
+/* Text content uses flex column to vertically center against the card */
 .help-center-content {
-  /* Pulls text to the LEFT side of its column (towards the card) */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
-  /* 1. This pushes the whole text block to the right, away from the card */
-  padding-left: 90px; 
-  
-  /* 2. 'width: max-content' forces the text to stay on one single line */
-  width: max-content; 
-  
-  /* 3. Remove the padding-right and massive max-width from before */
+  padding-left: 90px;
+  width: max-content;
   padding-right: 0;
   max-width: none;
 }
@@ -470,21 +475,21 @@
   margin-left: -50px;
 }
 
-/* BUTTON STYLING */
+/* Help center button with hover state */
 .btn-help-center {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 38px; 
+  padding: 14px 38px;
   margin-left: -50px;
   border: 2px solid #02033B;
   color: #02033B;
-  border-radius: 50px; 
+  border-radius: 50px;
   font-weight: 700;
   text-decoration: none;
   font-size: 1rem;
-  margin-top: 10px; 
-  width: fit-content; /* Ensures button doesn't stretch */
+  margin-top: 10px;
+  width: fit-content;
   transition: all 0.3s ease;
 }
 
@@ -493,7 +498,7 @@
   color: #ffffff;
 }
 
-/* RESPONSIVE FIX */
+/* Help center responsive */
 @media (max-width: 991px) {
   .help-center-content {
       padding-left: 0;
@@ -507,17 +512,20 @@
   }
 }
 
+/* ============================================================
+   SPYING BANNER SECTION
+   ============================================================ */
 
-/* BLUE BANNER SECTION */
+/* Full-width blue banner with centered text and buttons */
 .spying-banner {
-    background-color: #2925cc; /* The exact blue from Certo's brand */
-    padding: 84px 0; /* Matches your Figma padding-top and padding-bottom */
+    background-color: #2925cc;
+    padding: 84px 0;
     color: #ffffff;
     text-align: center;
 }
 
 .banner-title {
-    font-size: 2.3rem; /* Adjust based on your H2 size */
+    font-size: 2.3rem;
     font-weight: 800;
     margin-bottom: 20px;
     font-style: bold;
@@ -531,14 +539,14 @@
     opacity: 0.9;
 }
 
-/* BUTTONS CONTAINER */
+/* Two buttons sit side by side centered */
 .banner-btns {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Space between the two buttons */
+    gap: 15px;
 }
 
-/* YELLOW BUTTON (Left) */
+/* Yellow filled button */
 .btn-yellow {
     background-color: #FFC22B;
     color: #02033B;
@@ -555,7 +563,7 @@
     background-color: #e5ae26;
 }
 
-/* OUTLINE BUTTON (Right) */
+/* Transparent white outline button */
 .btn-outline-white {
     background-color: transparent;
     color: #ffffff;
@@ -573,7 +581,7 @@
     color: #2925cc;
 }
 
-/* RESPONSIVE FOR MOBILE */
+/* Banner responsive - stack buttons on mobile */
 @media (max-width: 768px) {
     .banner-btns {
         flex-direction: column;
@@ -584,10 +592,9 @@
     }
 }
 
-
-
-
-
+/* ============================================================
+   LATEST INSIGHTS SECTION
+   ============================================================ */
 .insights-section {
   background-color: #F3F8FF;
   padding: 90px 0;
@@ -601,35 +608,36 @@
   margin-bottom: 50px;
 }
 
-/* CARD STYLING - UPDATED FOR VERTICAL "LONG" LOOK */
+/* Tall vertical card with deep rounded corners matching Figma */
 .insight-card {
   background: #ffffff;
-  border-radius: 48px; /* Matching the deep round corners in Figma */
+  border-radius: 48px;
   overflow: hidden;
   height: 534px;
   display: flex;
   flex-direction: column;
-  /* CHANGE: Limiting width prevents the 'short and wide' look */
-  max-width: 320px; 
-  margin: 0 auto; 
+  max-width: 320px;
+  margin: 0 auto;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
   left: 68px;
 }
+
 .insights-section .row {
   justify-content: center !important;
-  display: flex;/* Adjust this number to make the gap smaller or larger */
+  display: flex;
 }
 
+/* Hover effect lifts card upward */
 .insight-card:hover {
   transform: translateY(-5px);
 }
 
+/* Top image area of each insight card */
 .card-image-wrap {
   position: relative;
-  /* CHANGE: Increased height makes the top half of the card look longer */
   height: 200px;
-  width: 100%; 
+  width: 100%;
 }
 
 .card-image-wrap img {
@@ -638,6 +646,7 @@
   object-fit: cover;
 }
 
+/* Category badge overlaid on top-left of card image */
 .badge {
   position: absolute;
   top: 20px;
@@ -651,13 +660,12 @@
 }
 
 .card-body {
-  /* CHANGE: Increased top/bottom padding stretches the card vertically */
-  padding: 45px 35px; 
+  padding: 45px 35px;
   flex-grow: 1;
 }
 
 .card-body h3 {
-  font-size: 1.6rem; /* Slightly larger to match Figma scale */
+  font-size: 1.6rem;
   font-weight: 800;
   color: #02033B;
   margin-bottom: 20px;
@@ -669,17 +677,14 @@
   color: #02033B;
   opacity: 0.9;
   line-height: 1.6;
-  
-  /* IMPORTANT: These lines ensure the text wraps and shows everything */
-  white-space: normal !important; 
-  overflow: visible !important;  
-  height: auto !important;       
-  display: block;                
-  
+  white-space: normal !important;
+  overflow: visible !important;
+  height: auto !important;
+  display: block;
   margin-bottom: 0;
 }
 
-/* CENTERED BUTTON */
+/* Centered yellow view all button */
 .btn-view-all {
   display: inline-block;
   background-color: #FFC22B;
@@ -696,19 +701,20 @@
   color: #02033B;
 }
 
-
-/* MAIN FOOTER SECTION */
+/* ============================================================
+   FOOTER SECTION
+   ============================================================ */
 .main-footer {
   background-color: #02033B;
-  padding: 160px 0 80px 0; 
+  padding: 160px 0 80px 0;
   color: #ffffff;
   position: relative;
 }
 
-/* LEFT SIDE: Brand & Socials */
+/* Left column: brand tagline */
 .footer-brand {
   font-weight: 800;
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
   margin-bottom: 40px;
   margin-left: 80px;
   text-align: left;
@@ -721,14 +727,15 @@
   margin-left: 80px;
 }
 
+/* Social icons inverted to white on dark background */
 .social-img-large {
-  height: 48px; 
-  width: auto;
+  height: 70px;
+  width: 100%;
   filter: brightness(0) invert(1);
 }
 
 .footer-legal-group {
-  margin-top: -10px; 
+  margin-top: -10px;
   display: flex;
   flex-direction: column;
   margin-left: 80px;
@@ -738,8 +745,8 @@
 
 .footer-legal-links {
   display: flex;
-  gap: 10px; 
-  margin-bottom: 40px; 
+  gap: 10px;
+  margin-bottom: 40px;
   margin-top: 10px;
   color: #ffffff;
 }
@@ -750,21 +757,23 @@
   font-size: 0.7rem;
 }
 
-/* UPDATED: Bigger Picture link is now white */
 .designed-by a {
   color: #ffffff;
   text-decoration: underline;
 }
 
-/* MIDDLE: Navigation */
+.copyright-text a {
+  color: #ffffff;
+}
+
+/* Middle column: navigation heading with bottom border */
 .footer-heading {
   font-weight: 800;
   font-size: 1.5rem;
   margin-bottom: 25px;
   margin-left: 50px;
-  /* UPDATED: Border lengthened to 100% width of container */
   border-bottom: 1px solid rgb(255, 255, 255);
-  display: block; 
+  display: block;
   width: 30%;
   padding-bottom: 25px;
 }
@@ -782,25 +791,26 @@
   align-items: center;
 }
 
+/* Yellow dash decorator before each nav item */
 .footer-nav li::before {
   content: "";
   display: inline-block;
-  width: 25px;         
+  width: 25px;
   height: 2px;
   background-color: #FFC22B;
-  margin-right: 15px;  
+  margin-right: 15px;
   border-radius: 2px;
 }
 
 .footer-nav li a {
-  color: #FFC22B; 
+  color: #FFC22B;
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;
   transition: opacity 0.3s;
 }
 
-/* RIGHT SIDE: Newsletter & White Box */
+/* Right column: newsletter image */
 .newsletter-static-wrap {
   text-align: right;
   margin-bottom: 30px;
@@ -813,32 +823,27 @@
   box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
   margin-right: 70px;
 }
-/* UPDATED: The White Box positioned to the far right */
+
+/* White decorative badge below newsletter card, aligned to far right */
 .white-square-badge {
-  width: 315.96px; 
+  width: 315.96px;
   height: 104px;
   background-color: #ffffff;
   border-radius: 15px;
   display: flex;
-  
-  /* Setting margin-left to auto pushes the box to the far right of its column */
-  margin-left: auto; 
-  
-  /* Set margin-right to 0 to align it with the edge of the newsletter card above */
-  margin-right: 70px; 
-  
-  /* Increased margin-top to match the vertical gap in Figma */
-  margin-top: 130px; 
+  margin-left: auto;
+  margin-right: 70px;
+  margin-top: 130px;
 }
 
-/* Ensure the parent column (col-lg-5) is handling the alignment correctly */
+/* Ensures right column children align to the right edge */
 .col-lg-5.text-end {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* This forces all children to the right edge */
+  align-items: flex-end;
 }
 
-/* BOTTOM AREA */
+/* Bottom legal disclaimer text */
 .legal-disclaimer {
   font-size: 0.75rem;
   margin-top: 40px;
